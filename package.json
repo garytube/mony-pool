@@ -1,0 +1,32 @@
+{
+  "name": "paypal-moneypool",
+  "version": "0.0.1",
+  "description": "scrapes a moneypool and returns the the current status and contributors",
+  "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "nodemon index.ts",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cheerio": "^0.22.22",
+    "@types/node": "^14.11.2",
+    "@types/node-fetch": "^2.5.7",
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0"
+  }
+}
