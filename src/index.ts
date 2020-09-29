@@ -9,7 +9,7 @@ const anonymous: User = {
 /**
  *  Money Pool
  */
-export default async (CAMPAIGN_ID: string): Promise<PaypalMoneyPool> => {
+export = async function moneyPool(CAMPAIGN_ID: string): Promise<PaypalMoneyPool> {
 
   const res = await fetch('https://www.paypal.com/pools/c/' + CAMPAIGN_ID)
   const moneyPool = await res.text()

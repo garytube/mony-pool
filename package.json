@@ -1,8 +1,9 @@
 {
   "name": "mony-pool",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "scrapes a moneypool and returns the the current status and contributors",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
