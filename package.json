@@ -1,6 +1,6 @@
 {
   "name": "mony-pool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "scrapes a moneypool and returns the the current status and contributors",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "ts-node index.ts",
-    "dev": "nodemon index.ts",
+    "dev": "ts-node test.ts",
     "build": "tsc",
     "prepare": "npm run build",
     "version": "git add -A src",

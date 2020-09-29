@@ -12,11 +12,16 @@ const anonymous: User = {
 export = async function moneyPool(CAMPAIGN_ID: string): Promise<PaypalMoneyPool> {
 
   const res = await fetch('https://www.paypal.com/pools/c/' + CAMPAIGN_ID)
+  if (res.status !== 200) throw new Error("money pool not found");
+
   const moneyPool = await res.text()
   const $ = await cheerio.load(moneyPool)
 
   const store = $("#store").html()
   const { campaign, contributors, txns } = await JSON.parse(store!)
+
+  if (!campaign) throw new Error("money pool not found");
+
   let { description, title, amount, pledge, current_value, currency, txn_count: payment_counts }: PaypalCampaign = campaign[CAMPAIGN_ID]
 
   let payments: Payment[] = txns.list
