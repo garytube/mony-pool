@@ -1,5 +1,5 @@
 {
-  "name": "paypal-moneypool",
+  "name": "mony-pool",
   "version": "0.0.1",
   "description": "scrapes a moneypool and returns the the current status and contributors",
   "main": "index.js",
