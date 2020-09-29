@@ -6,6 +6,10 @@
   "files": [
     "lib/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garytube/mony-pool"
+  },
   "scripts": {
     "start": "ts-node index.ts",
     "dev": "nodemon index.ts",
