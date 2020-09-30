@@ -6,21 +6,19 @@ export type Payment = {
   anonymous: boolean;
   contributor_id: string;
   note?: string;
-}
+};
 
 export type User = {
-  full_name: string,
-  photo?: string,
-  has_business_name?: boolean
-}
-
-
+  full_name: string;
+  photo?: string;
+  has_business_name?: boolean;
+};
 
 export interface Users {
-  [index: string]: User
+  [index: string]: User;
 }
 
-export type Orders = Payment & User
+export type Orders = Payment & User;
 
 export interface PaypalCampaign {
   owner: PaypalOwner;
@@ -63,16 +61,12 @@ export interface PaypalOwner {
   prepaid_status: string;
 }
 
-
 export interface PaypalMoneyPool {
   description: string;
   title: string;
   amount: number;
   payment_counts: number;
-  current_value: number;
+  total_value: number;
   currency: string;
   orders: Orders[];
 }
-
-
-
